@@ -62,4 +62,3 @@ class Stundent(Persona):
     
 
 
-

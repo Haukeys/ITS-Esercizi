@@ -1,15 +1,22 @@
+#implementazione del colore della pietra del giocatore
+from enum import StrEnum, auto
+
+class Colore(StrEnum):
+    bianco = auto()
+    nero = auto()
+
 #inizializzare un oggetto della classe Giocatore
 
 class Giocatore:
 
-    def __init__(self, nickname:str, nome:str, cognome:str, rank:int):
+    def __init__(self, nickname:str, nome:str, cognome:str, rank:int, colore:Colore):
         self.setNickmame(nickname)
         self.setNome(nome)
         self.setCognome(cognome)
         self.setRank(rank)
-
+        self.setColore(colore)
     def __str__(self):
-        return f"Nickname: {self.nickname}\nNome: {self.nome}\nCognome: {self.cognome}\nRank: {self.rank}"
+        return f"Nickname: {self.nickname}\nNome: {self.nome}\nCognome: {self.cognome}\nRank: {self.rank}n\Colore: {self.colore}"
 
     def setNickmame(self, nickname:str)->None:
         self.nickname=nickname
@@ -38,6 +45,11 @@ class Giocatore:
         else:
             self.rank = rank
 
+    def setColore(self, colore:Colore)->None:
+        if not isinstance(colore,Colore):
+            raise ValueError("Il colore deve essere bianco o nero")
+        self.colore=colore
+
     def getNickmame(self, nickname:str)->str:
         return self.nickname
     
@@ -50,12 +62,6 @@ class Giocatore:
     def getRank(self, rank:int)->int:
         return self.rank
 
-
-#implementazione del colore della pietra del giocatore
-from enum import StrEnum, auto
-
-class Pietra(StrEnum):
-    bianco = auto()
-    nero = auto()
-
+    def getColore(self, colore:Colore)->Colore:
+        return self.colore
     
