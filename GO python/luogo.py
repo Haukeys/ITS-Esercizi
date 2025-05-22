@@ -1,5 +1,5 @@
 import re
-
+from typing import Any
 #inizializzare un oggetto della classe luogo
 class Luogo:
 	# _via:str
