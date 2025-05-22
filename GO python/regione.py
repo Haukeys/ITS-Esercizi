@@ -16,5 +16,3 @@ class Regione:
         else:
             print("Error! il nome della non può essere una stringa vuota")
 
-    def getNome(self)->str:
-        return self.nome

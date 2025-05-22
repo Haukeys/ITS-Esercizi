@@ -15,5 +15,3 @@ class Città:
         else:
             print("Error! il nome della città non può essere una stringa vuota")
 
-    def getNome(self)->str:
-        return self.nome

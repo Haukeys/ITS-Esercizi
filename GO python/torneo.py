@@ -33,14 +33,7 @@ class Torneo:
             print("Error! L'edizione non può essere un valore vuoto")
 
 
-    def getNome(self, nome:str)->str:
-        return self.nome
-    
-    def getDerscrizione(self, descrizione:str)->str:
-        return self.descrizione
 
-    def getEdizione(self, edizione:int)->int:
-        return self.edizione
 
 
 

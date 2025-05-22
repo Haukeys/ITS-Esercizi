@@ -49,19 +49,3 @@ class Giocatore:
         if not isinstance(colore,Colore):
             raise ValueError("Il colore deve essere bianco o nero")
         self.colore=colore
-
-    def getNickmame(self, nickname:str)->str:
-        return self.nickname
-    
-    def getNome(self, nome:str)->str:
-        return self.nome
-
-    def getCognome(self, cognome:str)->str:
-        return self.cognome
-    
-    def getRank(self, rank:int)->int:
-        return self.rank
-
-    def getColore(self, colore:Colore)->Colore:
-        return self.colore
-    

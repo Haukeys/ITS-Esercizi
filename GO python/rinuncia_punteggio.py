@@ -25,9 +25,3 @@ class Rinuncia_punteggio(Partita):
         else:
             print("Error! il punteggio nero non può essere 0 o negativo")
     
-    def getPunteggioBianco(self,punteggio_bianco:int)->int:
-        return punteggio_bianco
-    
-    def getPunteggioNero(self,punteggio_nero:int)->int:
-        return punteggio_nero
-    

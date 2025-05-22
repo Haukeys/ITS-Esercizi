@@ -32,11 +32,3 @@ class Partita:
             raise ValueError("Komi deve essere un valore decimale tra 0 e 10 inclusi")
         self.regole=regole
 
-    def getData(self)->date:
-        return self.data
-    
-    def getKomi(self)->float:
-        return self.komi
-
-    def getRegole(self)->RegoleConteggio:
-        return self.regole
