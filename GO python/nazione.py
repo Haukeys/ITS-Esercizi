@@ -17,3 +17,4 @@ class Nazione:
 
     def getNome(self)->str:
         return self.nome
+    
