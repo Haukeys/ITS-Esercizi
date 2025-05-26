@@ -10,23 +10,15 @@ class Codice_v:
         return super().__new__(cls, v.upper().strip())
     
 from datetime import timedelta
-#tipo di dato specializzato per la durata
-class TimeRange:
-
-    def __new__(cls, v:Self)->Self:
-        pass
-
-
-
 
 #inizzializiamo un pggetto della classe volo
 class Volo:
-    def __init__(self, codice:Codice_v, durata:TimeRange)->None:
+    def __init__(self, codice:Codice_v, durata:timedelta)->None:
         self.codice=codice
         self.durata=durata
         
     def Codice(self, codice:Codice_v)->Codice_v:
         return codice
     
-    def Durata(self, durata:TimeRange)->TimeRange:
+    def Durata(self, durata:timedelta)->timedelta:
         return durata
