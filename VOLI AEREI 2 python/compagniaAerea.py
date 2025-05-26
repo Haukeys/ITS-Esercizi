@@ -22,8 +22,11 @@ class CompagniaAera:
     def Nome(self, nome:str)->str:
         
         if not nome.strip():
+
             raise ValueError("il nome non puo essere una stringa vuota")
+        
         return nome
     
     def Fondazione(self, fondazione:IntG1900)->IntG1900:
+        
         return fondazione

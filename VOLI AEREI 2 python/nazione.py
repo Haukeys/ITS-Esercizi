@@ -8,6 +8,8 @@ class Nazione:
     def Nome(self, nome:str)->None:
         
         if not nome.strip():
+
             raise ValueError("il nome non puo essere una stringa vuota")
+        
         return nome
     

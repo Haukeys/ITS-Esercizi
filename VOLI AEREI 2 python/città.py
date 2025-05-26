@@ -1,7 +1,7 @@
 from typing import Self, Any
 
-#inizializzare un oggetto della classe Città
 class IntGEZ(int):
+
     #tipo di dato specializzato intero >=0
 
     def __new__(cls,v: float|int|str|bool|Self)->Self:
@@ -13,6 +13,7 @@ class IntGEZ(int):
         
         return int.__new__(cls,v)
     
+#inizializzare un oggetto della classe Città    
 class Città:
 
     def __init__(self, nome:str, n_abitanti:IntGEZ):
