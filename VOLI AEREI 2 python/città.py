@@ -17,19 +17,23 @@ class IntGEZ(int):
 class Città:
 
     def __init__(self, nome:str, n_abitanti:IntGEZ):
-        self.Nome(nome)
-        self.N_abitanti(n_abitanti)
-
-    def Nome(self, nome:str)->str:
-        
-        if not nome.strip():
-            raise ValueError("il nome non puo essere una stringa vuota")
-        return nome
+        self.setnome(nome)
+        self.setn_abitanti(n_abitanti)
     
-    def N_abitanti(self, n_abitanti:IntGEZ)->IntGEZ:
-        return n_abitanti
+    def __str__(self):
+        return f"Nome città: {self.nome}, Numero abitanti: {self.n_abitanti}"
     
+    def setnome(self,nome:str)->None:
+        self.nome=nome
+
+    
+    def setn_abitanti(self, n_abitanti:IntGEZ)->None:
+        self.n_abitanti=n_abitanti
+        if self.n_abitanti is not IntGEZ:
+            raise ValueError(f"Errore , il valore deve essere maggiore o uguale di 0")
     
 
+    
+ci:Città=Città("ariccia",1)
 
-
+print(ci)

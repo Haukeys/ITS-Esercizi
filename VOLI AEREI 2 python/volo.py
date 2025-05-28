@@ -21,4 +21,5 @@ class Volo:
         return codice
     
     def Durata(self, durata:timedelta)->timedelta:
-        return durata
+        durata()
+

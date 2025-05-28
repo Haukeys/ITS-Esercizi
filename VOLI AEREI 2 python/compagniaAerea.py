@@ -15,18 +15,22 @@ class IntG1900(int):
     
 class CompagniaAera:
 
-    def __init__(self, nome:str, fondazione:IntG1900):
-        self.Nome(nome)
-        self.Fondazione(fondazione)
+    def __init__(self, nome:str, fondazione:IntG1900)->None:
+        self.setnome(nome)
+        self.setFondazione(fondazione)
 
-    def Nome(self, nome:str)->str:
-        
+    def __str__(self):
+        return f"Nome della compagnia: {self.setnome}, Fondazione: {self.setFondazione}"
+
+    def setnome(self, nome:str)->None:
+        self.setnome=nome.strip().upper()
         if not nome.strip():
 
             raise ValueError("il nome non puo essere una stringa vuota")
         
-        return nome
     
-    def Fondazione(self, fondazione:IntG1900)->IntG1900:
+    def setFondazione(self, fondazione:IntG1900)->None:
+        self.setFondazione=fondazione
         
-        return fondazione
+    
+
